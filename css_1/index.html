@@ -1,17 +1,20 @@
 <html>
-  <body>
+  <head>
     <style>
       body {
       	background:url(http://www.prowebdesign.ro/screen-ruler/screeen-ruler.png) top left no-repeat;
       }
+      h1 {
+      	margin: 40px;
+      }
       div {
         position: absolute;
-        font-size: 50px;
+        font-size: 30px;
         top: 300px;
         left: 400px;
         width: 600px;
         height: 500px;
-        border: 1px solid red;
+        border: 5px dashed black;
       }
       #div1 {
         background-color:red;
@@ -22,8 +25,29 @@
         z-index:101;
         transform: rotate(20deg);
       }
+      #div3 {
+        background-color:pink;
+        z-index:103;
+        transform: translate(100px, 200px);
+      }
+      #div4 {
+        background-color:#ccc;
+        z-index:105;
+        transform: scale(0.5);
+      }
+      #div5 {
+        background-color:white;
+        z-index:104;
+        transform: skew(10deg, 10deg);
+      }
     </style>
+  </head>
+  <body>
+  	<h1>2D transformation</h1>
     <div id="div1">DIV 1</div>
-    <div id="div2">DIV 2</div>
+    <div id="div2">DIV 2  transform: rotate(45deg)</div>
+    <div id="div3">DIV 3  transform: translate(100px, 200px)</div>
+    <div id="div4">DIV 4  transform: scale(0.5)</div>
+    <div id="div5">DIV 5  transform: skew(10deg, 10deg)</div>
   </body>
 </html>
