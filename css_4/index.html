@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>test</title>
+        <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+
+    </head>
+    <body>
+        <h1>A cool image rotator</h1>
+        <section id="cubecarousel">
+            <h2>A 3D image slider</h2>
+            <p>Note that because of the way a cube works, the image is moved out towards the screen, and is bigger than it should be. You should move it back by half the width of an image to make sure it is normal size.</p>
+
+            <style>
+                #controls, #transparency {
+                    text-align: center;
+                }
+
+                    #controls span {
+                        padding-right: 2em;
+                        cursor: pointer;
+                    }
+
+                #cubeCarousel {
+                    -webkit-perspective: 800;
+                    -moz-perspective: 800px;
+                    -ms-perspective: 800;
+                    perspective: 800;
+                    -webkit-perspective-origin: 50% 100px;
+                    -moz-perspective-origin: 50% 100px;
+                    -ms-perspective-origin: 50% 100px;
+                    perspective-origin: 50% 100px;
+                    margin: 100px auto 20px auto;
+                    width: 450px;
+                    height: 400px;
+                }
+
+                    #cubeCarousel #cubeSpinner {
+                        position: relative;
+                        margin: 0 auto;
+                        height: 281px;
+                        width: 450px;
+                        -webkit-transform-style: preserve-3d;
+                        -moz-transform-style: preserve-3d;
+                        -ms-transform-style: preserve-3d;
+                        transform-style: preserve-3d;
+                        -webkit-transform-origin: 50% 100px 0;
+                        -moz-transform-origin: 50% 100px 0;
+                        -ms-transform-origin: 50% 100px 0;
+                        transform-origin: 50% 100px 0;
+                        -webkit-transition: all 1.0s ease-in-out;
+                        -moz-transition: all 1.0s ease-in-out;
+                        -ms-transition: all 1.0s ease-in-out;
+                        transition: all 1.0s ease-in-out;
+                    }
+
+                    #cubeCarousel #Ycube, #cubeCarousel #Zcube {
+                        -webkit-transform-style: preserve-3d;
+                        -moz-transform-style: preserve-3d;
+                        -ms-transform-style: preserve-3d;
+                        transform-style: preserve-3d;
+                    }
+
+                    #cubeCarousel .face {
+                        position: absolute;
+                        height: 281px;
+                        width: 450px;
+                        padding: 0px;
+                    }
+
+
+                #cubeSpinner .one {
+                    -webkit-transform: translateZ(225px);
+                    -moz-transform: translateZ(225px);
+                    -ms-transform: translateZ(225px);
+                    transform: translateZ(225px);
+                }
+
+                #cubeSpinner .two {
+                    -webkit-transform: rotateY(90deg) translateZ(225px);
+                    -moz-transform: rotateY(90deg) translateZ(225px);
+                    -ms-transform: rotateY(90deg) translateZ(225px);
+                    transform: rotateY(90deg) translateZ(225px);
+                }
+
+                #cubeSpinner .three {
+                    -webkit-transform: rotateY(180deg) translateZ(225px);
+                    -moz-transform: rotateY(180deg) translateZ(225px);
+                    -ms-transform: rotateY(180deg) translateZ(225px);
+                    transform: rotateY(180deg) translateZ(225px);
+                }
+
+                #cubeSpinner .four {
+                    -webkit-transform: rotateY(-90deg) translateZ(225px);
+                    -moz-transform: rotateY(-90deg) translateZ(225px);
+                    -ms-transform: rotateY(-90deg) translateZ(225px);
+                    transform: rotateY(-90deg) translateZ(225px);
+                }
+
+                .trans {
+                    opacity: 0.7;
+                }
+            </style>
+            <script>
+                $(document).ready(function () {
+
+                    $("#controls").on('click', 'span', function () {
+                        $("#cubeSpinner").css("transform", "rotateY(" + ($(this).index() * -90) + "deg)");
+                        $("#controls span").removeClass("selected");
+                        $(this).addClass("selected");
+                    });
+
+                    $("#transparency").click(function () {
+                        $("#cubeSpinner img").toggleClass("trans");
+                        $(this).toggleClass("selected");
+                    });
+
+                });
+            </script>
+            <div id="cubeCarousel">
+                <div id="cubeSpinner">
+
+                    <div class="face one">
+                        <img src="Windows%20Logo.jpg">
+                    </div>
+                    <div class="face two">
+                        <img src="Turtle.jpg">
+                    </div>
+                    <div class="face three">
+                        <img src="Rainbow%20Worm.jpg">
+                    </div>
+                    <div class="face four">
+                        <img src="Birdman.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <p id="controls">
+                <span class="selected">Image 1</span>
+                <span>Image 2</span>
+                <span>Image 3</span>
+                <span>Image 4</span>
+            </p>
+            <p id="transparency">Click me to toggle transparency</p>
+
+        </section>        
+    </body>
+</html>
