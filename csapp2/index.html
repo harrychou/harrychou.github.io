@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="csapp2">
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script>
+        var app = angular.module('csapp2', []);
+        app.controller('MyController', function ($scope) {
+            var that = this;
+            this.showInt = function() {
+                that.intInBinary = (+that.int).toString(2);
+                that.intInHex = (+that.int).toString(16);
+            };
+        });
+    </script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+<div ng-controller="MyController as ctrl" style="width: 960px; padding: 20px">
+    Decimal Integer: <input type="text" ng-model="ctrl.int" ng-change="ctrl.showInt()"/>
+    <ul>
+        <li>in binary: {{ ctrl.intInBinary }}</li>
+        <li>in hexadecimal: {{ ctrl.intInHex }}</li>
+    </ul>
+</div>
+</body>
+</html>
+
