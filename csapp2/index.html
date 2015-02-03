@@ -7,9 +7,30 @@
         var app = angular.module('csapp2', []);
         app.controller('MyController', function ($scope) {
             var that = this;
-            this.showInt = function() {
+
+            var padLeadingZero = function () {
+
+            };
+
+            var checkEndian = function () {
+                var a = new ArrayBuffer(4);
+                var b = new Uint8Array(a);
+                var c = new Uint32Array(a);
+                b[0] = 0xa1;
+                b[1] = 0xb2;
+                b[2] = 0xc3;
+                b[3] = 0xd4;
+                if (c[0] === 0xd4c3b2a1) return "little endian";
+                if (c[0] === 0xa1b2c3d4) return "big endian";
+                else throw new Error("Something crazy just happened");
+            }
+
+            this.endian = checkEndian();
+
+            this.showInt = function () {
                 that.intInBinary = (+that.int).toString(2);
                 that.intInHex = (+that.int).toString(16);
+                that.intBitInvert = ~ (+that.int);
             };
         });
     </script>
@@ -21,9 +42,12 @@
 <div ng-controller="MyController as ctrl" style="width: 960px; padding: 20px">
     Decimal Integer: <input type="text" ng-model="ctrl.int" ng-change="ctrl.showInt()"/>
     <ul>
+        <li>Endian: {{ ctrl.endian }}</li>
         <li>in binary: {{ ctrl.intInBinary }}</li>
         <li>in hexadecimal: {{ ctrl.intInHex }}</li>
+        <li>{{ ctrl.intBitInvert }}</li>
     </ul>
+
 </div>
 </body>
 </html>
