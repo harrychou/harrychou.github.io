@@ -10,6 +10,7 @@ body, html{
   display: table-cell;
   vertical-align: middle;
   position: relative;
+    background-image: url(http://seamlesspatternchecker.com/hash/seamless-pattern-samples/b/1/1/b11-vector-shabby-chic-rose-pattern-floral-seamless-background-with-flower-and-berry-139905892.jpg);
 }
 .background-circle{
   width: 400px;
@@ -369,7 +370,7 @@ body, html{
 .music-note{
   position: absolute;
   font-size: 150px;
-  color: #FCB040;
+  color: #ef4136;
   width: 1px;
   left: 50%;
   opacity: 0;
@@ -421,7 +422,7 @@ body, html{
   -webkit-animation: text-anim 0.7s 3s 1 ease;
 }
 .shirt-text:nth-of-type(2){
-  color: #EF4136;
+  color: red;
   animation: text-anim 0.7s 3.1s 1 ease;
   -webkit-animation: text-anim 0.7s 3.1s 1 ease;
 }
