@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="riffwave.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Piano Notes</h2>
+        <ul>
+            <li><button id="btn1" class="piano">C</button>&nbsp;&nbsp;frequency:<input id="freq1" type="number" value="261.63" /></li>
+            <li><button id="btn2" class="piano">D</button>&nbsp;&nbsp;frequency:<input id="freq2" type="number" value="293.66" /></li>
+            <li><button id="btn3" class="piano">E</button>&nbsp;&nbsp;frequency:<input id="freq3" type="number" value="329.63" /></li>
+            <li><button id="btn4" class="piano">F</button>&nbsp;&nbsp;frequency:<input id="freq4" type="number" value="349.23" /></li>
+            <li><button id="btn5" class="piano">G</button>&nbsp;&nbsp;frequency:<input id="freq5" type="number" value="392.00" /></li>
+            <li><button id="btn6" class="piano">A</button>&nbsp;&nbsp;frequency:<input id="freq6" type="number" value="440.00" /></li>
+            <li><button id="btn7" class="piano">B</button>&nbsp;&nbsp;frequency:<input id="freq7" type="number" value="493.88" /></li>
+            <li><button id="btn8" class="piano">C</button>&nbsp;&nbsp;frequency:<input id="freq8" type="number" value="523.26" /></li>
+        </ul>
+        <blockquote>Piano Frequency from: http://www.answers.com/Q/What_is_the_frequency_of_Do-Re-Mi</blockquote>
+    </div>
+    <div>
+        <h2>Piano Two Notes Together</h2>
+        <input id="freq1" class="multi2 one" type="number" value="261.63" /> &
+        <input id="freq1" class="multi2 two" type="number" value="392.00" /> <br/>
+        <button id="btn1" class="multi2">Play</button>
+    </div>
+    <div>
+        <h2>Piano Three Notes Together</h2>
+        <input id="freq1" class="multi3 one" type="number" value="261.63" /> &
+        <input id="freq1" class="multi3 two" type="number" value="329.63" /> <br />
+        <input id="freq1" class="multi3 three" type="number" value="392.00" /> <br />
+        <button id="btn1" class="multi3">Play</button>
+    </div>
+
+    <script>
+        function simHertz(hz) {
+            var audio = new Audio();
+            var wave = new RIFFWAVE();
+            var data = [];
+
+            wave.header.sampleRate = 4000;
+
+            var seconds = .5;
+
+            for (var i = 0; i < wave.header.sampleRate * seconds; i++) {
+                data[i] = Math.round(128 + 127 * Math.sin(i * 2 * Math.PI * hz / wave.header.sampleRate));
+            }
+
+            wave.Make(data);
+            audio.src = wave.dataURI;
+            return audio;
+        }
+
+        function simHertz2(hz, hz1) {
+            var audio = new Audio();
+            var wave = new RIFFWAVE();
+            var data = [];
+
+            wave.header.sampleRate = 42300;
+            wave.header.numChannels = 2; // two channels (stereo)
+
+            var seconds = 2;
+
+            for (var i = 0; i < wave.header.sampleRate * seconds * 2; ) {
+                data[i++] = Math.round(128 + 127 * Math.sin(i * 2 * Math.PI * hz / wave.header.sampleRate));
+                data[i++] = Math.round(128 + 127 * Math.sin(i * 2 * Math.PI * hz1 / wave.header.sampleRate));
+            }
+
+            wave.Make(data);
+            audio.src = wave.dataURI;
+            return audio;
+        }
+
+        function simHertz3(hz, hz1, hz2) {
+            var audio = new Audio();
+            var wave = new RIFFWAVE();
+            var data = [];
+
+            wave.header.sampleRate = 42000;
+            wave.header.numChannels = 3; 
+
+            var seconds = 2;
+
+            for (var i = 0; i < wave.header.sampleRate * seconds * 3;) {
+                data[i++] = Math.round(128 + 127 * Math.sin(i * 2 * Math.PI * hz / wave.header.sampleRate));
+                data[i++] = Math.round(128 + 127 * Math.sin(i * 2 * Math.PI * hz1 / wave.header.sampleRate));
+                data[i++] = Math.round(128 + 127 * Math.sin(i * 2 * Math.PI * hz2 / wave.header.sampleRate));
+            }
+
+            wave.Make(data);
+            audio.src = wave.dataURI;
+            return audio;
+        }
+
+
+        $(function () {
+            $('.piano').click(function () {
+                var freq = $('#' + $(this).attr('id').replace('btn', 'freq')).val();
+                simHertz(freq).play();
+            });
+            $('button.multi2').click(function () {
+                var freq1 = $('input.multi2.one').val();
+                var freq2 = $('input.multi2two').val();
+                simHertz2(freq1, freq2).play();
+            });
+            $('button.multi3').click(function () {
+                var freq1 = $('input.multi.one').val();
+                var freq2 = $('input.multi.two').val();
+                var freq3 = $('input.multi.three').val();
+                simHertz3(freq1, freq2, freq3).play();
+            });
+        });
+    </script>
+</body>
+
+</html>
