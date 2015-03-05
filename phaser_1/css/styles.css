@@ -4,16 +4,8 @@ body {
 
 #flappy-bird-reborn {
   border: 2px solid white;
-  width: 288px;
+  width: 688px;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-}
-p {
-  text-align: center;
-  color: white;
-}
-
-a {
-  color: #3caaff;
 }
