@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            table.table>thead>tr>th {
+                text-align: center;
+                font-size: 1.1em;
+                background-repeat: no-repeat;
+                background-position: center right;
+                background-image: url("sort_both.png");
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    </head>
+    <body>
+        <h1>Bootstrap Table</h1>
+        <div class="container">
+            <div class="row">
+
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <tr><th title="A">A</th><th title="B">A</th><th title="C">A</th><th title="D">A</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                        <tr><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('table.table>thead>tr>th').click(function () {
+                    var cell = $(this);
+                    var asc = cell.css('background-image').indexOf("sort_asc.png") > 0;
+                    $('table.table>thead>tr>th').css('background-image', 'url("sort_both.png")');
+                    var title = cell.attr('title');
+                    if (asc) {
+                        cell.css('background-image', 'url("sort_desc.png")');
+                    } else {
+                        cell.css('background-image', 'url("sort_asc.png")');
+                    }
+                });
+            });
+        </script>
+  </body>
+</html>
