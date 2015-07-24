@@ -1,0 +1,55 @@
+2015-07-24
+==========
+
+I'd like to start writing notes on JavaScript and ES6 stuff
+	http://www.wintellect.com/devcenter/paulballard/typescript-1-5-released-with-more-ecmascript-6-features
+	https://github.com/Microsoft/TypeScript/wiki/Roadmap
+	http://www.slideshare.net/NeilGreen1/type-script-vs-coffeescript-vs-es6
+
+Paul Krugman's article
+- MIT gang
+	http://www.nytimes.com/2015/07/24/opinion/paul-krugman-the-mit-gang.html
+	- MIT economists are right
+	- but why do the politicians still not doing the right thing
+	- group thinkings? some kind of team/group dynamics in play?
+
+Matt Johnson's series of articles
+- All things in time
+	- http://codeofmatt.com/2012/03/29/all-things-in-time/
+	- most db and system only capture what is current and ignore the history
+	- we don't know how current states get to how things are
+	- just adding DateCreated, DateUpdated does not solve the problem
+	- temporal patterns
+		http://martinfowler.com/eaaDev/
+		http://martinfowler.com/eaaDev/TemporalProperty.html
+		http://martinfowler.com/eaaDev/Effectivity.html
+		http://martinfowler.com/eaaDev/TemporalObject.html
+	- bi-temporal issues in db
+	- problem with query efficiency from db
+		http://www.codeproject.com/Articles/17637/Bitemporal-Database-Table-Design-The-Basics
+	- so, a temporal concern is an architectural concern, and should be considered for the whole system
+		* UI
+		* domain model
+		* storage
+		* messaging
+		* services/API ... etc
+	- alternative ways to think about the problem can help reduce the complexity
+		* CQRS
+		* Event Sourcing
+	- capture 'what you do' (commands and events at specific time) not only 'the result of what you do'
+- TO READ
+	- Five Common Daylight Saving Time Antipatterns of .NET Developers
+		http://codeofmatt.com/2015/03/06/common-daylight-saving-time-mistakes-for-net-developers/
+	- The case against DateTime.Now 
+		http://codeofmatt.com/2013/04/25/the-case-against-datetime-now/
+	- TimeZone aggreviations (very interesting)
+		http://codeofmatt.com/2014/04/27/time-zone-abbreviations/
+	- UTC vs GMT
+		http://codeofmatt.com/2014/06/18/utc-vs-gmt/
+	- What is a timezone
+		http://codeofmatt.com/2015/02/07/what-is-a-time-zone/
+	- Localized time zone names in .NET
+		http://codeofmatt.com/2014/12/26/localized-time-zone-names-in-net/
+    - (From Rick Strahl) Back to Basics: UTC and TimeZones in .NET Web Apps
+		http://weblog.west-wind.com/posts/2015/Feb/10/Back-to-Basics-UTC-and-TimeZones-in-NET-Web-Apps
+		http://codeofmatt.com/2015/04/20/beware-the-edge-cases-of-time/
