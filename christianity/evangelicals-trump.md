@@ -1,5 +1,14 @@
 Wayne Grudem
 http://theresurgent.com/wayne-grudem-walks-it-back/?utm_content=buffer68e87&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+http://www.wsj.com/articles/evangelical-leader-wayne-grudem-pulls-endorsement-of-donald-trump-1476066325
+
+http://www.thedailybeast.com/articles/2016/10/10/beth-moore-the-christian-women-speaking-out-about-trump-s-bad-news.html
+
+http://fortune.com/2016/10/09/evangelical-leaders-back-trump/
+
+http://www.nytimes.com/interactive/projects/cp/opinion/clinton-trump-second-debate-election-2016/the-heavenly-height-of-evangelical-hypocrisy
+
+http://www.christianitytoday.com/gleanings/2016/october/why-trump-tape-cause-evangelical-leader-switch-wayne-grudem.html
 
 http://townhall.com/columnists/waynegrudem/2016/10/09/trumps-moral-character-and-the-election-n2229846
 
