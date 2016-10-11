@@ -102,3 +102,11 @@ http://law2.umkc.edu/faculty/projects/ftrials/conlaw/Fundamentalism.html
 British Encyclpedia: Christian fundamentalism AMERICAN PROTESTANT MOVEMENT
 https://www.britannica.com/topic/Christian-fundamentalism
 
+Theological Distinctives of Evangelicalism
+http://thinktheology.org/wp-content/uploads/2013/10/The-Theological-Distinctives-of-Evangelicalism-Integrating-Explicit-and-Implicit-Theology-in-the-Quest-for-an-Evangelical-Identity.pdf
+
+(REVIEW) DAVID BEBBINGTON EVANGELICALISM IN MODERN BRITAIN: A HISTORY FROM THE 1730s TO THE 1980s 
+http://szabadosadam.hu/divinity/wp-content/uploads/2010/09/BEBBINGTON.pdf
+
+Beyond Bebbington: The Quest for Evangelical Identity in a Postmodern Era
+http://churchsociety.org/docs/churchman/122/Cman_122_3_Harris.pdf
