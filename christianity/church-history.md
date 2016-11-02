@@ -24,7 +24,7 @@
 
 [Early Church](https://visualunit.files.wordpress.com/2010/09/early_church3.pdf)
 
-[Chruch Mission)(https://visualunit.files.wordpress.com/2010/04/hcm_timeline.jpg)
+[Chruch Mission](https://visualunit.files.wordpress.com/2010/04/hcm_timeline.jpg)
 
 [Church Student Mission](https://visualunit.files.wordpress.com/2010/03/student_mission2.jpg)
 
