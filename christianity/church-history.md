@@ -14,6 +14,8 @@
 
 397- 新約正典確立
 
+---
+
 [Church History - graph](http://ogdenchurchofchrist.org/wp-content/uploads/churchhistory.jpg)
 
 [Church History Timeline, pdf](http://www.churchtimeline.com/Documents/ChurchTimeline.pdf)
@@ -30,3 +32,4 @@
 
 [Comparison of English Bible Translations](https://visualunit.files.wordpress.com/2010/09/trans_comparison.png)
 
+[Orthodox Church's view](http://www.saintandrewwaco.org/our-faith/timeline-of-church-history/)
