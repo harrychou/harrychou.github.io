@@ -1,10 +1,17 @@
 ---
+
 33- Pentacost
+
 49- Council of Jerusalem (解決外邦人信主後，加入教會要遵守的條件)（徒十五）
+
 70- Destruction of Jerusalem (General Titus, later Emperor)
+
 95- Book of Revelation
+
 ---
+
 325- 尼西亞信經 325-787 Seven Ecumenical Council 七次的大公會議
+
 397- 新約正典確立
 
 [Church History - graph](http://ogdenchurchofchrist.org/wp-content/uploads/churchhistory.jpg)
